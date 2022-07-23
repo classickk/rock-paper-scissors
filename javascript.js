@@ -17,3 +17,23 @@ function getComputerChoice() {
     }
     return compChoice;
 }
+
+function playRound(playerSelection, computerSelection) {
+    // remove leading and trailing spaces from player selection
+    playerSelection = playerSelection.trim();
+    // make first letter of player choice uppercase
+    const firstLetter = playerSelection.charAt(0).toUpperCase();
+    // make rest of player choice lowercase
+    const restOfWord = playerSelection.substr(1).toLowerCase();
+    // rebuild player choice string
+    playerSelection = firstLetter.concat(restOfWord);
+    
+
+
+    console.log(playerSelection);
+    console.log(computerSelection);
+}
+
+const playerSelection = "roCk";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
